@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101d30" />
+  <meta name="description" content="첨단교육팀 포트폴리오 | 기획과 실행을 연결하는 실무자의 기록" />
+  <title>Portfolio | 기획과 실행을 연결하다</title>
+  <style>
+    :root{--ink:#14223a;--muted:#66758b;--navy:#101d30;--blue:#427bf5;--pale:#f5f7fb;--border:#e6ebf2;--white:#fff;--mint:#a5f2d5;--shadow:0 24px 65px rgba(18,34,56,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--pale);color:var(--ink);font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:#d4e7ff;color:#14223a}
+    .container{width:min(1140px,calc(100% - 48px));margin-inline:auto}.skip{position:absolute;left:-999px;top:0;background:#fff;padding:12px;z-index:20}.skip:focus{left:10px}.topbar{position:sticky;top:0;z-index:10;background:rgba(245,247,251,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(230,235,242,.9)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:17px;font-weight:850;letter-spacing:-.045em;display:inline-flex;align-items:center;gap:10px}.brand-mark{display:grid;place-items:center;width:31px;height:31px;border-radius:10px;background:var(--navy);color:#fff;font-size:13px}.nav-links{display:flex;align-items:center;gap:30px}.nav-links a{font-size:13px;color:#59687b;font-weight:650;transition:color .18s}.nav-links a:hover,.nav-links a:focus-visible{color:var(--blue)}.nav-cta{padding:11px 17px;border-radius:999px;background:var(--navy);color:#fff!important}.nav-cta:hover{background:#2d4260}
+    .hero{background:var(--navy);color:#fff;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;inset:-160px -70px auto auto;width:650px;height:650px;border:1px solid rgba(255,255,255,.07);border-radius:50%;box-shadow:0 0 0 115px rgba(255,255,255,.025),0 0 0 230px rgba(255,255,255,.018);pointer-events:none}.hero-inner{position:relative;display:grid;grid-template-columns:1.35fr .65fr;gap:54px;align-items:center;padding:110px 0 115px}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.18em;font-weight:750;color:var(--mint);text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;background:var(--mint);border-radius:50%;box-shadow:0 0 0 5px rgba(165,242,213,.12)}h1{font-size:clamp(39px,5.3vw,72px);line-height:1.21;letter-spacing:-.065em;margin:26px 0 22px;font-weight:820}h1 span{color:#a3bffd}.hero-description{font-size:16px;line-height:1.95;color:#afbed2;max-width:530px;word-break:keep-all}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:35px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:12px;padding:14px 21px;font-size:13px;font-weight:750;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s;cursor:pointer}.btn:hover{transform:translateY(-3px)}.btn:active{transform:translateY(0) scale(.98)}.btn-primary{background:#e7efff;color:#203966}.btn-primary:hover{background:#fff;box-shadow:0 10px 25px rgba(0,0,0,.15)}.btn-outline{border-color:#496079;color:#fff;background:rgba(255,255,255,.035)}.btn-outline:hover{border-color:#b8c7df;background:rgba(255,255,255,.1)}.profile-panel{position:relative;padding:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:23px;backdrop-filter:blur(8px);box-shadow:0 25px 70px rgba(0,0,0,.12)}.profile-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.status{font-size:11px;color:#add7c8;display:flex;align-items:center;gap:7px}.status:before{content:"";width:6px;height:6px;background:#7ee0b4;border-radius:50%}.profile-logo{display:grid;place-items:center;width:70px;height:70px;border-radius:19px;background:linear-gradient(135deg,#a5c1ff,#7a8dd9);color:#132342;font-weight:850;font-size:26px;margin:37px 0 24px;letter-spacing:-.06em}.profile-panel h2{font-size:23px;letter-spacing:-.05em;margin:0 0 7px}.profile-panel p{font-size:13px;color:#bac8da;margin:0}.profile-line{height:1px;background:rgba(255,255,255,.15);margin:27px 0}.profile-meta{display:flex;justify-content:space-between;gap:10px;font-size:12px;line-height:2.4}.profile-meta span:first-child{color:#91a4bd}.profile-meta span:last-child{color:#f6f9ff;font-weight:600;text-align:right}
+    main section.content{padding-top:103px}.section-kicker{color:var(--blue);font-size:12px;font-weight:850;letter-spacing:.19em}.section-heading{font-size:clamp(27px,3.2vw,39px);line-height:1.35;letter-spacing:-.055em;margin:14px 0 16px}.section-desc{max-width:640px;color:var(--muted);font-size:15px;line-height:1.95;margin:0;word-break:keep-all}.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:55px;margin-top:36px;align-items:stretch}.about-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:30px;box-shadow:0 9px 25px rgba(21,35,56,.025)}.about-card h3,.work-card h3{margin:0 0 15px;font-size:19px;letter-spacing:-.035em}.about-card p{color:var(--muted);line-height:1.85;font-size:14px;margin:0}.tag-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.tag{display:inline-flex;padding:8px 12px;border-radius:8px;background:#eff4fc;color:#365b92;font-size:12px;font-weight:700}.fact-list{display:grid;grid-template-columns:110px 1fr;gap:18px 12px;font-size:13px;line-height:1.7}.fact-list .key{color:#8490a1}.fact-list .value{font-weight:650;color:#273b55}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.work-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:26px;min-height:225px;transition:transform .2s,box-shadow .2s}.work-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.work-icon{width:43px;height:43px;background:#eef3ff;color:#3e70dc;border-radius:12px;display:grid;place-items:center;margin-bottom:26px;font-size:20px}.work-card p{font-size:13px;color:var(--muted);line-height:1.85;margin:0;word-break:keep-all}
+    .timeline{margin-top:36px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:30px 34px}.timeline-row{display:grid;grid-template-columns:150px 1fr;gap:23px;position:relative;padding:8px 0 27px}.timeline-row:last-child{padding-bottom:4px}.timeline-row+.timeline-row{border-top:1px solid var(--border);padding-top:27px}.timeline-label{font-size:12px;letter-spacing:.02em;font-weight:800;color:#4774c9}.timeline-body h3{font-size:17px;margin:0 0 7px;letter-spacing:-.03em}.timeline-body p{font-size:13px;color:var(--muted);line-height:1.85;margin:0}
+    .projects{margin-top:96px;background:#edf2f9;padding:90px 0 102px}.project-head{display:flex;align-items:end;justify-content:space-between;gap:25px}.project-note{font-size:12px;color:#78889d}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:37px}.project-card{display:flex;flex-direction:column;min-height:290px;background:#fff;border:1px solid #e2e9f2;border-radius:20px;padding:27px;box-shadow:0 8px 20px rgba(24,45,77,.025);transition:transform .2s,box-shadow .2s,border-color .2s;outline-offset:4px}.project-card:hover,.project-card:focus-visible{transform:translateY(-7px);box-shadow:0 22px 45px rgba(36,61,98,.12);border-color:#b7c9ea}.project-number{width:48px;height:48px;display:grid;place-items:center;background:#142844;border-radius:14px;color:#fff;font-size:22px;font-weight:750;letter-spacing:-.04em}.project-type{font-size:11px;color:#4774c9;font-weight:800;letter-spacing:.13em;margin-top:30px}.project-card h3{font-size:21px;letter-spacing:-.05em;margin:9px 0}.project-card p{font-size:13px;color:#718095;line-height:1.7;margin:0;flex:1}.project-link{font-size:13px;font-weight:800;color:#254d9b;display:flex;align-items:center;justify-content:space-between;margin-top:22px}.arrow{font-size:19px;transition:transform .18s}.project-card:hover .arrow{transform:translateX(5px)}
+    footer{background:var(--navy);color:#fff;padding:45px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-title{font-size:17px;font-weight:750;letter-spacing:-.04em}.footer-sub{font-size:12px;color:#879ab2;margin-top:8px}.to-top{color:#d8e4f3;border:1px solid #43546e;border-radius:9px;background:transparent;padding:10px 14px;font-size:12px;cursor:pointer;transition:background .2s}.to-top:hover{background:#2d405a}a:focus-visible,button:focus-visible{outline:3px solid #87aeff;outline-offset:4px}
+    @media(max-width:850px){.hero-inner{grid-template-columns:1fr;gap:40px;padding:85px 0}.profile-panel{max-width:520px}.about-layout{grid-template-columns:1fr;gap:16px}.work-grid{grid-template-columns:1fr 1fr}.project-grid{grid-template-columns:1fr 1fr}.nav-links{gap:16px}}
+    @media(max-width:600px){.container{width:min(100% - 36px,1140px)}.nav{height:64px}.brand{font-size:15px}.nav-links{gap:12px}.nav-links a:not(.nav-cta){display:none}.nav-cta{font-size:12px!important;padding:9px 12px}.hero-inner{padding:76px 0 80px}.hero-description{font-size:14px}.profile-panel{padding:23px}.about-card{padding:24px}main section.content{padding-top:72px}.work-grid,.project-grid{grid-template-columns:1fr}.work-card{min-height:unset}.timeline{padding:24px}.timeline-row{grid-template-columns:1fr;gap:7px}.timeline-row+.timeline-row{padding-top:22px}.projects{margin-top:70px;padding:74px 0}.project-head{display:block}.project-note{display:block;margin-top:12px}.project-card{min-height:250px}.footer-inner{align-items:flex-start}.footer-title{font-size:15px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="topbar">
+    <nav class="container nav" aria-label="주 메뉴">
+      <a href="#top" class="brand" aria-label="포트폴리오 맨 위로"><span class="brand-mark">P.</span> PORTFOLIO</a>
+      <div class="nav-links"><a href="#about">소개</a><a href="#work">담당 업무</a><a href="#career">경력</a><a href="#projects" class="nav-cta">결과물 보기 ↗</a></div>
+    </nav>
+  </header>
+  <div id="top"></div>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow">Professional Portfolio · 2026</div>
+        <h1 id="hero-title">아이디어를 구조화하고,<br><span>실행으로 연결합니다.</span></h1>
+        <p class="hero-description">안녕하세요. 첨단교육팀에서 교육과 업무의 새로운 가능성을 탐색하는 실무자입니다. 문제를 정의하고, 실용적인 기획을 만들고, 기술을 활용해 결과물로 구현하는 과정을 중요하게 생각합니다.</p>
+        <div class="hero-actions"><a href="#projects" class="btn btn-primary">프로젝트 둘러보기 <span aria-hidden="true">↗</span></a><a href="#about" class="btn btn-outline">자기소개 보기 <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <aside class="profile-panel" aria-label="프로필 요약">
+        <div class="profile-top"><span class="eyebrow" style="font-size:10px;letter-spacing:.12em">PROFILE CARD</span><span class="status">Curious &amp; Building</span></div>
+        <div class="profile-logo" aria-hidden="true">ME.</div>
+        <h2>이름을 입력해 주세요</h2>
+        <p>Education Planning · Digital Innovation</p>
+        <div class="profile-line"></div>
+        <div class="profile-meta"><span>소속</span><span>첨단교육팀</span></div>
+        <div class="profile-meta"><span>관심 분야</span><span>교육 기획 · AI 활용 · 디지털 도구</span></div>
+        <div class="profile-meta"><span>지향점</span><span>실행 가능한 아이디어</span></div>
+      </aside>
+    </div>
+  </section>
+  <main id="main">
+    <section id="about" class="content container" aria-labelledby="about-title">
+      <div class="section-kicker">01 / ABOUT ME</div><h2 class="section-heading" id="about-title">새로운 방식으로 문제를 해결하는 사람</h2>
+      <p class="section-desc">기획의 논리와 사용자의 경험을 함께 고려합니다. 복잡한 정보를 이해하기 쉽게 정리하고, 협업을 통해 실행 가능한 결과로 구체화하는 데 관심이 있습니다.</p>
+      <div class="about-layout">
+        <article class="about-card"><h3>저를 소개합니다</h3><p>교육 현장의 요구를 파악하고, 업무에 유용한 방법을 고민합니다. 문서 기획부터 디지털 도구를 활용한 프로토타입까지, 아이디어가 실제로 작동하는 순간을 만들어 가고자 합니다.</p><div class="tag-list"><span class="tag">문제 정의</span><span class="tag">기획·구조화</span><span class="tag">협업</span><span class="tag">AI 활용</span><span class="tag">실행 중심</span></div></article>
+        <article class="about-card"><h3>기본 정보</h3><div class="fact-list"><span class="key">이름</span><span class="value">이름 입력 필요</span><span class="key">소속</span><span class="value">첨단교육팀</span><span class="key">직무</span><span class="value">담당 직무 입력 필요</span><span class="key">전문 분야</span><span class="value">기획 · 디지털 교육 · 업무 혁신 (예시)</span><span class="key">이메일</span><span class="value">이메일 입력 필요</span></div></article>
+      </div>
+    </section>
+    <section id="work" class="content container" aria-labelledby="work-title">
+      <div class="section-kicker">02 / WHAT I DO</div><h2 class="section-heading" id="work-title">관심과 역량을 실무에 연결합니다</h2><p class="section-desc">아래 항목은 포트폴리오 구성을 위한 업무 분야 예시이며, 실제 담당 업무에 맞게 수정할 수 있습니다.</p>
+      <div class="work-grid">
+        <article class="work-card"><div class="work-icon" aria-hidden="true">▤</div><h3>기획 및 문서화</h3><p>요구사항과 현황을 분석하고 기획서, 실행계획, 업무자료를 체계적으로 정리합니다.</p></article>
+        <article class="work-card"><div class="work-icon" aria-hidden="true">◇</div><h3>교육·프로그램 설계</h3><p>학습자 관점에서 목표와 과정을 설계하고 효과적인 운영 방식을 탐색합니다.</p></article>
+        <article class="work-card"><div class="work-icon" aria-hidden="true">⌘</div><h3>AI 및 디지털 도구 활용</h3><p>생성형 AI와 웹 기반 도구를 활용해 아이디어를 빠르게 시각화하고 검증합니다.</p></article>
+      </div>
+    </section>
+    <section id="career" class="content container" aria-labelledby="career-title">
+      <div class="section-kicker">03 / EXPERIENCE</div><h2 class="section-heading" id="career-title">경력 및 주요 경험</h2><p class="section-desc">확인되지 않은 경력·연도·성과는 기재하지 않았습니다. 실제 이력에 맞게 아래 내용을 교체해 주세요.</p>
+      <div class="timeline"><div class="timeline-row"><div class="timeline-label">CURRENT</div><div class="timeline-body"><h3>첨단교육팀</h3><p>담당 업무, 재직 기간 및 주요 성과를 입력해 주세요.</p></div></div><div class="timeline-row"><div class="timeline-label">PREVIOUS</div><div class="timeline-body"><h3>이전 경력 · 프로젝트</h3><p>이전 소속, 프로젝트명, 역할과 기여 내용을 입력해 주세요.</p></div></div><div class="timeline-row"><div class="timeline-label">HIGHLIGHTS</div><div class="timeline-body"><h3>주요 성과 및 전문 역량</h3><p>대표 성과, 활용 기술, 자격·교육 이수 등 검증 가능한 내용을 입력해 주세요.</p></div></div></div>
+    </section>
+    <section class="projects" id="projects" aria-labelledby="projects-title"><div class="container"><div class="project-head"><div><div class="section-kicker">04 / SELECTED WORKS</div><h2 class="section-heading" id="projects-title">작업 결과물 살펴보기</h2><p class="section-desc">각 카드를 누르면 해당 HTML 페이지로 이동합니다. 연결 대상 파일은 추후 같은 폴더에 추가하면 됩니다.</p></div><span class="project-note">EXPLORE 01 — 03</span></div>
+      <div class="project-grid">
+        <a class="project-card" href="1.html" aria-label="1번 기획문서 MD 페이지 열기"><span class="project-number">1</span><span class="project-type">DOCUMENTATION</span><h3>기획문서 MD</h3><p>문제 정의부터 목표, 실행 절차까지 구조화한 기획 문서를 확인합니다.</p><span class="project-link">1.html 열기 <span class="arrow" aria-hidden="true">↗</span></span></a>
+        <a class="project-card" href="2.html" aria-label="2번 바이브코딩 결과물 페이지 열기"><span class="project-number">2</span><span class="project-type">INTERACTIVE BUILD</span><h3>바이브코딩 결과물</h3><p>아이디어를 인터랙티브 웹 결과물로 구현한 사례를 소개합니다.</p><span class="project-link">2.html 열기 <span class="arrow" aria-hidden="true">↗</span></span></a>
+        <a class="project-card" href="3.html" aria-label="3번 슬라이드 페이지 열기"><span class="project-number">3</span><span class="project-type">PRESENTATION</span><h3>슬라이드</h3><p>핵심 메시지와 정보를 시각적으로 전달하는 발표 자료를 모았습니다.</p><span class="project-link">3.html 열기 <span class="arrow" aria-hidden="true">↗</span></span></a>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container footer-inner"><div><div class="footer-title">Better Ideas. Clearer Execution.</div><div class="footer-sub">© <span id="year">2026</span> Personal Portfolio · Built with curiosity.</div></div><button class="to-top" type="button" id="topButton">맨 위로 ↑</button></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('topButton').addEventListener('click', function(){window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
+  </script>
+</body>
+</html>
